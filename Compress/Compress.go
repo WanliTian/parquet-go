@@ -7,7 +7,7 @@ import (
 	"io/ioutil"
 
 	"github.com/golang/snappy"
-	"github.com/xitongsys/parquet-go/parquet"
+	"github.com/WanliTian/parquet-go/parquet"
 )
 
 //Uncompress using Gzip

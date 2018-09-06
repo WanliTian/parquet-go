@@ -8,12 +8,12 @@ import (
 	"strings"
 
 	"github.com/apache/thrift/lib/go/thrift"
-	"github.com/xitongsys/parquet-go/Common"
-	"github.com/xitongsys/parquet-go/Compress"
-	"github.com/xitongsys/parquet-go/ParquetEncoding"
-	"github.com/xitongsys/parquet-go/ParquetType"
-	"github.com/xitongsys/parquet-go/SchemaHandler"
-	"github.com/xitongsys/parquet-go/parquet"
+	"github.com/WanliTian/parquet-go/Common"
+	"github.com/WanliTian/parquet-go/Compress"
+	"github.com/WanliTian/parquet-go/ParquetEncoding"
+	"github.com/WanliTian/parquet-go/ParquetType"
+	"github.com/WanliTian/parquet-go/SchemaHandler"
+	"github.com/WanliTian/parquet-go/parquet"
 )
 
 //Page is used to store the page data

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	. "github.com/xitongsys/parquet-go/SchemaHandler"
+	. "github.com/WanliTian/parquet-go/SchemaHandler"
 )
 
 type Student struct {

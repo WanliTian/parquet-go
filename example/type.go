@@ -3,10 +3,10 @@ package main
 import (
 	"log"
 
-	"github.com/xitongsys/parquet-go/ParquetFile"
-	"github.com/xitongsys/parquet-go/ParquetReader"
-	"github.com/xitongsys/parquet-go/ParquetType"
-	"github.com/xitongsys/parquet-go/ParquetWriter"
+	"github.com/WanliTian/parquet-go/ParquetFile"
+	"github.com/WanliTian/parquet-go/ParquetReader"
+	"github.com/WanliTian/parquet-go/ParquetType"
+	"github.com/WanliTian/parquet-go/ParquetWriter"
 )
 
 type TypeList struct {

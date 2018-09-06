@@ -1,6 +1,6 @@
 # parquet-go v1.2.8
 [![Travis Status for xitongsys/parquet-go](https://travis-ci.org/xitongsys/parquet-go.svg?branch=master&label=linux+build)](https://travis-ci.org/xitongsys/parquet-go)
-[![godoc for xitongsys/parquet-go](https://godoc.org/github.com/nathany/looper?status.svg)](http://godoc.org/github.com/xitongsys/parquet-go)
+[![godoc for xitongsys/parquet-go](https://godoc.org/github.com/nathany/looper?status.svg)](http://godoc.org/github.com/WanliTian/parquet-go)
 
 
 parquet-go is a pure-go implementation of reading and writing the parquet format file. 
@@ -19,7 +19,7 @@ go get github.com/golang/snappy
 ## Install
 Add the parquet-go library to your $GOPATH/src:
 ```sh
-go get github.com/xitongsys/parquet-go/...
+go get github.com/WanliTian/parquet-go/...
 ```
 Look at a few examples in `example/`. 
 ```sh
@@ -146,21 +146,21 @@ Using this interface, parquet-go can read/write parquet file on different platfo
 ## Writer
 Three Writers are supported: ParquetWriter, JSONWriter, CSVWriter.
 * ParquetWriter is used to write predefined Golang structs.
-[Example of ParquetWriter](https://github.com/xitongsys/parquet-go/blob/master/example/local_flat.go)
+[Example of ParquetWriter](https://github.com/WanliTian/parquet-go/blob/master/example/local_flat.go)
 
 * JSONWriter is used to write JSON strings
-[Example of JSONWriter](https://github.com/xitongsys/parquet-go/blob/master/example/json_write.go)
+[Example of JSONWriter](https://github.com/WanliTian/parquet-go/blob/master/example/json_write.go)
 
 * CSVWriter is used to write data format similar with CSV(not nested)
-[Example of CSVWriter](https://github.com/xitongsys/parquet-go/blob/master/example/csv_write.go)
+[Example of CSVWriter](https://github.com/WanliTian/parquet-go/blob/master/example/csv_write.go)
 
 ## Reader
 Two Readers are supported: ParquetReader, ColumnReader
 * ParquetReader is used to read predefined Golang structs
-[Example of ParquetReader](https://github.com/xitongsys/parquet-go/blob/master/example/local_nested.go)
+[Example of ParquetReader](https://github.com/WanliTian/parquet-go/blob/master/example/local_nested.go)
 
 * ColumnReader is used to read some columns. The read function return 3 slices([value], [RepetitionLevel], [DefinitionLevel]) of the records.
-[Example of ColumnReader](https://github.com/xitongsys/parquet-go/blob/master/example/column_read.go)
+[Example of ColumnReader](https://github.com/WanliTian/parquet-go/blob/master/example/column_read.go)
 
 ### Tips
 * If the parquet file is very big (even the size of parquet file is small, the uncompressed size may be very large), please don't read all rows at one time, which may induce the OOM. You can read a small portion of the data at a time like a stream-oriented file.
@@ -181,7 +181,7 @@ type Student struct {
 	Day    int32   `parquet:"name=day, type=DATE"`
 }
 ```
-[Example of tags](https://github.com/xitongsys/parquet-go/blob/master/example/local_flat.go)
+[Example of tags](https://github.com/WanliTian/parquet-go/blob/master/example/local_flat.go)
 
 
 ### JSON
@@ -249,7 +249,7 @@ var jsonSchema string = `
 }
 `
 ```
-[Example of JSON schema](https://github.com/xitongsys/parquet-go/blob/master/example/json_schema.go)
+[Example of JSON schema](https://github.com/WanliTian/parquet-go/blob/master/example/json_schema.go)
 
 
 ### CSV metadata
@@ -262,7 +262,7 @@ md := []string{
 	"name=Sex, type=BOOLEAN",
 }
 ```
-[Example of CSV metadata](https://github.com/xitongsys/parquet-go/blob/master/example/csv_write.go)
+[Example of CSV metadata](https://github.com/WanliTian/parquet-go/blob/master/example/csv_write.go)
 
 
 ## Parallel
@@ -282,10 +282,10 @@ import (
 	"log"
 	"time"
 
-	"github.com/xitongsys/parquet-go/ParquetFile"
-	"github.com/xitongsys/parquet-go/ParquetReader"
-	"github.com/xitongsys/parquet-go/ParquetWriter"
-	"github.com/xitongsys/parquet-go/parquet"
+	"github.com/WanliTian/parquet-go/ParquetFile"
+	"github.com/WanliTian/parquet-go/ParquetReader"
+	"github.com/WanliTian/parquet-go/ParquetWriter"
+	"github.com/WanliTian/parquet-go/parquet"
 )
 
 type Student struct {
@@ -364,7 +364,7 @@ func main() {
 ```
 
 ## Tool
-* [parquet-tools](https://github.com/xitongsys/parquet-go/blob/master/tool/parquet-tools): Command line tools that aid in the inspection of Parquet files
+* [parquet-tools](https://github.com/WanliTian/parquet-go/blob/master/tool/parquet-tools): Command line tools that aid in the inspection of Parquet files
 
 
 ## Status
